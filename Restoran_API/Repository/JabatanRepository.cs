@@ -1,23 +1,22 @@
-﻿using Restoran_API.DTO.jabatan;
-using Restoran_API.Models;
+﻿using Restoran_API.Models;
 using Restoran_API.Repository.IRepository;
 
 namespace Restoran_API.Repository
 {
-    public class JabatanRepository : IJabatanRepository
+    public class PenggunaRepository : IPenggunaRepository
     {
         private dbRestoranMakananContext _context;
-        public JabatanRepository(dbRestoranMakananContext context)
+        public PenggunaRepository(dbRestoranMakananContext context)
         {
             _context = context;
         }
 
-        public async Task<List<Jabatan>> getAllJabatan()
+        public async Task<List<Pengguna>> getAllPengguna()
         {
-            List<Jabatan> value = new List<Jabatan>();
+            List<Pengguna> value = new List<Pengguna>();
             try
             {
-                value = _context.Jabatans.ToList();
+                value = _context.Penggunas.Where(ss => ss.IsActive == true).ToList();
 
             }
             catch (Exception)

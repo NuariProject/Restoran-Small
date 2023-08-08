@@ -1,10 +1,10 @@
-﻿using Restoran_API.DTO.jabatan;
+﻿using Restoran_API.DTO.pengguna;
 using Restoran_API.Models;
 
 namespace Restoran_API.Repository.IRepository
 {
-    public interface IJabatanRepository
+    public interface IPenggunaRepository
     {
-        Task<List<Jabatan>> getAllJabatan();
+        Task<List<Pengguna>> getAllPengguna();
     }
 }
