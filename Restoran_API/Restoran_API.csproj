@@ -23,10 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTO\pesananHeader\" />
     <Folder Include="DTO\pesananDetail\" />
-    <Folder Include="DTO\pengguna\" />
-    <Folder Include="DTO\menu\" />
     <Folder Include="Models\" />
   </ItemGroup>
 

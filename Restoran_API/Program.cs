@@ -19,6 +19,9 @@ builder.Services.AddDbContext<dbRestoranMakananContext>(option =>
 
 // dependency injection
 builder.Services.AddScoped<IJabatanRepository, JabatanRepository>();
+builder.Services.AddScoped<IPenggunaRepository, PenggunaRepository>();
+builder.Services.AddScoped<IMenuRepository, MenuRepository>();
+builder.Services.AddScoped<IPesananRepository, PesananRepository>();
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 
