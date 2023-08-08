@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
 using Restoran_API.DTO.jabatan;
+using Restoran_API.DTO.menu;
+using Restoran_API.DTO.pengguna;
+using Restoran_API.DTO.pesanan;
 using Restoran_API.Models;
 
 namespace Restoran_API
@@ -10,8 +13,15 @@ namespace Restoran_API
         {
 
             CreateMap<Jabatan, jabatanDTO>().ReverseMap();
-            CreateMap<Jabatan, jabatanCreateDTO>().ReverseMap();
-            CreateMap<Jabatan, jabatanUpdateDTO>().ReverseMap();
+
+            CreateMap<Pengguna, penggunaDTO>().ReverseMap();
+
+            CreateMap<Menu, menuDTO>().ReverseMap();
+            CreateMap<Menu, menuCreateDTO>().ReverseMap();
+            CreateMap<Menu, menuUpdateDTO>().ReverseMap();
+
+            CreateMap<PesananDetail, pesananDetailDTO>().ReverseMap();
+            CreateMap<PesananHeader, pesananHeaderDTO>().ReverseMap();
         }
     }
 }
