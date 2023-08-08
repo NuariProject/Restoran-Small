@@ -43,14 +43,7 @@ namespace Restoran_API.Models
                     .IsUnicode(false)
                     .HasColumnName("code");
 
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("createdBy");
-
-                entity.Property(e => e.CreatedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("createdDate");
+                entity.Property(e => e.CreatedDate).HasColumnName("createdDate");
 
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
@@ -59,54 +52,29 @@ namespace Restoran_API.Models
                     .IsUnicode(false)
                     .HasColumnName("jabatan");
 
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("modifiedBy");
-
-                entity.Property(e => e.ModofiedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("modofiedDate");
+                entity.Property(e => e.ModifiedDate).HasColumnName("modifiedDate");
             });
 
             modelBuilder.Entity<Menu>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("menu");
+
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Code)
                     .HasMaxLength(5)
                     .IsUnicode(false)
                     .HasColumnName("code");
 
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("createdBy");
-
-                entity.Property(e => e.CreatedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("createdDate");
+                entity.Property(e => e.CreatedDate).HasColumnName("createdDate");
 
                 entity.Property(e => e.Harga)
                     .HasColumnType("decimal(18, 2)")
                     .HasColumnName("harga");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("id");
-
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("modifiedBy");
-
-                entity.Property(e => e.ModofiedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("modofiedDate");
+                entity.Property(e => e.ModifiedDate).HasColumnName("modifiedDate");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
@@ -125,27 +93,13 @@ namespace Restoran_API.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("createdBy");
-
-                entity.Property(e => e.CreatedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("createdDate");
+                entity.Property(e => e.CreatedDate).HasColumnName("createdDate");
 
                 entity.Property(e => e.IdJabatan).HasColumnName("idJabatan");
 
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("modifiedBy");
-
-                entity.Property(e => e.ModofiedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("modofiedDate");
+                entity.Property(e => e.ModifiedDate).HasColumnName("modifiedDate");
 
                 entity.Property(e => e.Nama)
                     .HasMaxLength(50)
@@ -172,14 +126,7 @@ namespace Restoran_API.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("createdBy");
-
-                entity.Property(e => e.CreatedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("createdDate");
+                entity.Property(e => e.CreatedDate).HasColumnName("createdDate");
 
                 entity.Property(e => e.IdMenu).HasColumnName("idMenu");
 
@@ -187,14 +134,7 @@ namespace Restoran_API.Models
 
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("modifiedBy");
-
-                entity.Property(e => e.ModofiedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("modofiedDate");
+                entity.Property(e => e.ModifiedDate).HasColumnName("modifiedDate");
 
                 entity.Property(e => e.Qty).HasColumnName("qty");
             });
@@ -210,27 +150,13 @@ namespace Restoran_API.Models
                     .IsUnicode(false)
                     .HasColumnName("code");
 
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("createdBy");
-
-                entity.Property(e => e.CreatedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("createdDate");
+                entity.Property(e => e.CreatedDate).HasColumnName("createdDate");
 
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
                 entity.Property(e => e.IsBayar).HasColumnName("isBayar");
 
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("modifiedBy");
-
-                entity.Property(e => e.ModofiedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("modofiedDate");
+                entity.Property(e => e.ModifiedDate).HasColumnName("modifiedDate");
 
                 entity.Property(e => e.NamaCustomer)
                     .HasMaxLength(25)

@@ -10,10 +10,8 @@ namespace Restoran_API.Models
         public string Nama { get; set; } = null!;
         public int IdJabatan { get; set; }
         public string Password { get; set; } = null!;
-        public string CreatedBy { get; set; } = null!;
         public DateTime CreatedDate { get; set; }
-        public string? ModifiedBy { get; set; }
-        public DateTime? ModofiedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         public bool IsActive { get; set; }
 
         public virtual Jabatan IdJabatanNavigation { get; set; } = null!;

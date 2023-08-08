@@ -10,10 +10,8 @@ namespace Restoran_API.Models
         public string Name { get; set; } = null!;
         public int Stok { get; set; }
         public decimal Harga { get; set; }
-        public string CreatedBy { get; set; } = null!;
         public DateTime CreatedDate { get; set; }
-        public string? ModifiedBy { get; set; }
-        public DateTime? ModofiedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         public bool IsActive { get; set; }
     }
 }
