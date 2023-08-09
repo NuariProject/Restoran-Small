@@ -21,7 +21,12 @@ namespace Restoran_API
             CreateMap<Menu, menuUpdateDTO>().ReverseMap();
 
             CreateMap<PesananDetail, pesananDetailDTO>().ReverseMap();
+            CreateMap<PesananDetail, pesananDetailCreateDTO>().ReverseMap();
+            CreateMap<PesananDetail, pesananDetailUpdateDTO>().ReverseMap();
+
             CreateMap<PesananHeader, pesananHeaderDTO>().ReverseMap();
+            CreateMap<PesananHeader, pesananHeaderCreateDTO>().ReverseMap();
+            CreateMap<PesananHeader, pesananHeaderUpdateDTO>().ReverseMap();
         }
     }
 }
