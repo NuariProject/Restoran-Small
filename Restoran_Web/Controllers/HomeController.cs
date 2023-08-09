@@ -13,10 +13,18 @@ namespace Restoran_Web.Controllers
             _logger = logger;
         }
 
+        [Route("User")]
+        [Route("Home/Index")]
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("Username") == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+
             return View();
         }
+
 
         public IActionResult Privacy()
         {
