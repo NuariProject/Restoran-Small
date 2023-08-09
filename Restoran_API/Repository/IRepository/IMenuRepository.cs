@@ -10,6 +10,6 @@ namespace Restoran_API.Repository.IRepository
         Task<Menu> getMenu(Expression<Func<Menu, bool>> filter = null);
         Task Create(Menu model);
         Task<Menu> Update(Menu model);
-        Task Delete(Menu model);
+        Task Delete(int id);
     }
 }

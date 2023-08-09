@@ -4,6 +4,7 @@ using Restoran_API.Models;
 using Restoran_API.Repository.IRepository;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection.PortableExecutable;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Restoran_API.Repository
@@ -32,13 +33,11 @@ namespace Restoran_API.Repository
             }
         }
 
-        public async Task Delete(Menu model)
+        public async Task Delete(int id)
         {
             try
             {
-                //_context.Menus.Remove(model);
-                //await _context.SaveChangesAsync();
-
+                var model = await _context.Menus.FindAsync(id);
                 model.ModifiedDate = DateTime.Now;
                 model.IsActive = false;
                 _context.Menus.Update(model);

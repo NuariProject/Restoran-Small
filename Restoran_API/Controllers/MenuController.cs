@@ -162,15 +162,7 @@ namespace Restoran_API.Controllers
                     return BadRequest(_response);
                 }
 
-                var villa = await _IMenu.getMenu(ss => ss.Id == id);
-                if (villa == null)
-                {
-                    _response.StatusCode = HttpStatusCode.NotFound;
-                    _response.IsSuccess = false;
-                    return NotFound(_response);
-                }
-
-                await _IMenu.Delete(villa);
+                await _IMenu.Delete(id);
                 _response.StatusCode = HttpStatusCode.NoContent;
 
                 return Ok(_response);
