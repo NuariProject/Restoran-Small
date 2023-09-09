@@ -18,15 +18,7 @@ namespace Restoran_API
 
             CreateMap<Menu, menuDTO>().ReverseMap();
             CreateMap<Menu, menuCreateDTO>().ReverseMap();
-            CreateMap<Menu, menuUpdateDTO>().ReverseMap();
-
-            CreateMap<PesananDetail, pesananDetailDTO>().ReverseMap();
-            CreateMap<PesananDetail, pesananDetailCreateDTO>().ReverseMap();
-            CreateMap<PesananDetail, pesananDetailUpdateDTO>().ReverseMap();
-
-            CreateMap<PesananHeader, pesananHeaderDTO>().ReverseMap();
-            CreateMap<PesananHeader, pesananHeaderCreateDTO>().ReverseMap();
-            CreateMap<PesananHeader, pesananHeaderUpdateDTO>().ReverseMap();
+            CreateMap<Menu, menuUpdateDTO>().ReverseMap(
         }
     }
 }
